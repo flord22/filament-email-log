@@ -33,7 +33,7 @@ class EmailResource extends Resource
         return config('filament-email-log.model.label_plural') ?? parent::getPluralModelLabel();
     }
     
-    protected static function getNavigationIcon(): string
+    public static function getNavigationIcon(): string
     {
         return config('filament-email-log.navigation.icon') ?? 'heroicon-o-envelope';
     }
