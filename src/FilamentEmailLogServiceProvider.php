@@ -10,6 +10,11 @@ class FilamentEmailLogServiceProvider extends PackageServiceProvider
 {
     public static string $name = 'filament-email-log';
 
+    protected function getResources(): array
+    {
+        return config('filament-email-log.resources') ?? EmailResource::class;
+    }
+
     public function configurePackage(Package $package): void
     {
         /*
